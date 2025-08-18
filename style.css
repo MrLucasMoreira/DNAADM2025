@@ -1,0 +1,70 @@
+/* Estilo minimalista inspirado na Apple */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Sf Pro Display", Sf Pro Display, ;
+}
+
+body {
+  background: #fff;
+  color: #111;
+  line-height: 1.6;
+}
+
+/* Navbar fixa */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.9); /* fundo translúcido estilo Apple */
+  backdrop-filter: blur(10px); /* efeito vidro */
+  display: flex;
+  justify-content: center;
+  padding: 15px 0;
+  border-bottom: 1px solid #eaeaea;
+  z-index: 1000;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #111;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #0071e3; /* Azul Apple */
+}
+
+/* Espaço para compensar o header fixo */
+.container {
+  max-width: 900px;
+  margin: 120px auto 60px; /* espaço extra no topo */
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  font-weight: 500;
+}
+
+p {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 20px;
+}

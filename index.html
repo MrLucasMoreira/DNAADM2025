@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DNA ADM | 2025</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+      @font-face {
+          font-family: 'SFPRODISPLAYBOLD';
+          src: url('font/SFPRODISPLAYBLACKITALIC.OTF');
+          font-weight: normal;
+          font-style: normal;
+        }
+        /* Estilos Personalizados */
+        :root {
+            --primary-blue: #0a32c8;
+            --background-rgba: rgba(10, 25, 80, 0.15); /* Cor de vidro baseada no fundo */
+        }
+
+        body {
+            /* Usando o background que você enviou */
+            background: url("IMG_5519.PNG") no-repeat center center fixed;
+            background-size: cover;
+            color: #ffffff;
+            font-family: 'SFPRODISPLAYBOLD', sans-serif;
+            /* Ativa o ScrollSpy do Bootstrap */
+            position: relative; 
+        }
+
+        /* --- Navbar Estilo "Glass" --- */
+        .navbar {
+            background-color: rgba(0, 0, 20, 0.4);
+            backdrop-filter: blur(15px) saturate(180%);
+            -webkit-backdrop-filter: blur(15px) saturate(180%);
+            transition: background-color 0.3s ease;
+        }
+
+        .navbar-brand img {
+            height: 40px;
+        }
+
+        .nav-link {
+            color: rgba(255, 255, 255, 0.8) !important;
+            font-weight: 500;
+            padding: 8px 15px !important;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-link:hover, .nav-link.active {
+            color: #ffffff !important;
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        /* --- Seções --- */
+        section {
+            padding: 120px 0 60px 0;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        h1.display-4 {
+            font-weight: 600;
+        }
+
+        p.lead {
+            color: #e0e0e0;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* --- Componentes Específicos --- */
+        #video-home {
+            max-width: 700px;
+            width: 100%;
+            border-radius: 1rem;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+        }
+        
+        /* Carousel do Manual */
+        .carousel-item img {
+            border-radius: 1rem;
+        }
+
+        /* Cards da Sociedade dos Lobos */
+        .card-lobo {
+            background-color: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 1rem;
+            backdrop-filter: blur(10px);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card-lobo:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+        }
+        .card-lobo img {
+            border-radius: 1rem 1rem 0 0;
+            object-fit: cover;
+            height: 200px;
+        }
+
+        /* Grid de Patrocinadores */
+        .patrocinador-logo {
+            background-color: rgba(255, 255, 255, 0.95);
+            padding: 15px;
+            border-radius: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 120px;
+            transition: transform 0.3s ease;
+        }
+        .patrocinador-logo:hover {
+            transform: scale(1.05);
+        }
+        .patrocinador-logo img {
+            max-width: 100%;
+            max-height: 80px;
+            object-fit: contain;
+        }
+
+        /* --- Footer --- */
+        footer {
+            background-color: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(10px);
+        }
+
+    </style>
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#mainNavbar" data-bs-offset="80">
+
+    <!-- Navbar Fixa com Bootstrap -->
+    <nav id="mainNavbar" class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#home">
+                <img src="logo.png" alt="Logo DNA ADM">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav gap-lg-3">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#manual">Manual de Integração</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#sociedade">Sociedade dos Lobos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#patrocinadores">Patrocinadores</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Seção Home -->
+    <section id="home">
+        <div class="container text-center">
+            <h1 class="display-4 mb-3">DNA ADM ©</h1>
+            <p class="lead mb-4">
+                O DNA ADM da Etec de Olímpia transforma a sala de aula em um espaço de inovação, unindo teoria e prática para inspirar e capacitar, mostrando que Administração é essência, atitude e transformação.
+            </p>
+            <video id="video-home" controls poster="caminho/para/uma_imagem_preview.jpg">
+                <source src="video.mp4" type="video/mp4">
+                Seu navegador não suporta a tag de vídeo.
+            </video>
+        </div>
+    </section>
+
+    <!-- Seção Manual de Integração com Carousel do Bootstrap -->
+    <section id="manual">
+        <div class="container text-center">
+            <h1 class="display-4 mb-3">Manual de Integração</h1>
+            <p class="lead mb-5">
+                Aqui você encontra todas as informações essenciais para participar do evento de forma completa e integrada.
+            </p>
+            <div id="manualCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#manualCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#manualCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#manualCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#manualCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                    <button type="button" data-bs-target="#manualCarousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                    <button type="button" data-bs-target="#manualCarousel" data-bs-slide-to="5" aria-label="Slide 6"></button>
+                    <button type="button" data-bs-target="#manualCarousel" data-bs-slide-to="6" aria-label="Slide 7"></button>
+                    <button type="button" data-bs-target="#manualCarousel" data-bs-slide-to="7" aria-label="Slide 8"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active"><img src="manual/img1.jpg" class="d-block w-100" alt="Página 1 do Manual"></div>
+                    <div class="carousel-item"><img src="manual/img2.jpg" class="d-block w-100" alt="Página 2 do Manual" loading="lazy"></div>
+                    <div class="carousel-item"><img src="manual/img3.jpg" class="d-block w-100" alt="Página 3 do Manual" loading="lazy"></div>
+                    <div class="carousel-item"><img src="manual/img4.jpg" class="d-block w-100" alt="Página 4 do Manual" loading="lazy"></div>
+                    <div class="carousel-item"><img src="manual/img5.jpg" class="d-block w-100" alt="Página 5 do Manual" loading="lazy"></div>
+                    <div class="carousel-item"><img src="manual/img6.jpg" class="d-block w-100" alt="Página 6 do Manual" loading="lazy"></div>
+                    <div class="carousel-item"><img src="manual/img7.jpg" class="d-block w-100" alt="Página 7 do Manual" loading="lazy"></div>
+                    <div class="carousel-item"><img src="manual/img8.jpg" class="d-block w-100" alt="Página 8 do Manual" loading="lazy"></div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#manualCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Anterior</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#manualCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Próximo</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Sociedade dos Lobos com Cards do Bootstrap -->
+    <section id="sociedade">
+        <div class="container text-center">
+            <h1 class="display-4 mb-3">Sociedade dos Lobos</h1>
+            <p class="lead mb-5">
+                A Sociedade dos Lobos representa a força, união e liderança de nossa turma. Prepare-se para viver essa experiência.
+            </p>
+            <div class="row g-4 justify-content-center">
+                <div class="col-lg-4 col-md-6">
+                    <div class="card card-lobo text-white"><img src="sociedade/img1.png" class="card-img-top" alt="Lobo 1"><div class="card-body"><p class="card-text">Resenha virus.</p></div></div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card card-lobo text-white"><img src="sociedade/img2.png" class="card-img-top" alt="Lobo 2"><div class="card-body"><p class="card-text">Lobo 2 - Outra descrição.</p></div></div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card card-lobo text-white"><img src="sociedade/img3.png" class="card-img-top" alt="Lobo 3"><div class="card-body"><p class="card-text">Lobo 3 - Texto explicativo.</p></div></div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card card-lobo text-white"><img src="sociedade/img4.png" class="card-img-top" alt="Lobo 4"><div class="card-body"><p class="card-text">Lobo 4 - Breve legenda.</p></div></div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card card-lobo text-white"><img src="sociedade/img5.png" class="card-img-top" alt="Lobo 5"><div class="card-body"><p class="card-text">Lobo 5 - Texto.</p></div></div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card card-lobo text-white"><img src="sociedade/img6.png" class="card-img-top" alt="Lobo 6"><div class="card-body"><p class="card-text">Lobo 6 - Descrição.</p></div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Patrocinadores com Grid Responsivo do Bootstrap -->
+    <section id="patrocinadores">
+        <div class="container text-center">
+            <h1 class="display-4 mb-3">Nossos Patrocinadores</h1>
+            <p class="lead mb-5">
+                Agradecemos aos nossos patrocinadores, que tornam este evento possível com seu apoio e confiança.
+            </p>
+            <div class="row g-4 align-items-center">
+                <!-- Coloque aqui as 16 logos dos patrocinadores -->
+                <div class="col-lg-3 col-md-4 col-6"><div class="patrocinador-logo"><img src="patrocinadores/img1.png" alt="Patrocinador 1"></div></div>
+                <div class="col-lg-3 col-md-4 col-6"><div class="patrocinador-logo"><img src="patrocinadores/img2.png" alt="Patrocinador 2"></div></div>
+                <div class="col-lg-3 col-md-4 col-6"><div class="patrocinador-logo"><img src="patrocinadores/img3.png" alt="Patrocinador 3"></div></div>
+                <div class="col-lg-3 col-md-4 col-6"><div class="patrocinador-logo"><img src="patrocinadores/img4.png" alt="Patrocinador 4"></div></div>
+                <div class="col-lg-3 col-md-4 col-6"><div class="patrocinador-logo"><img src="patrocinadores/img5.png" alt="Patrocinador 5"></div></div>
+                <div class="col-lg-3 col-md-4 col-6"><div class="patrocinador-logo"><img src="patrocinadores/img6.png" alt="Patrocinador 6"></div></div>
+                <div class="col-lg-3 col-md-4 col-6"><div class="patrocinador-logo"><img src="patrocinadores/img7.png" alt="Patrocinador 7"></div></div>
+                <div class="col-lg-3 col-md-4 col-6"><div class="patrocinador-logo"><img src="patrocinadores/img8.png" alt="Patrocinador 8"></div></div>
+                <div class="col-lg-3 col-md-4 col-6"><div class="patrocinador-logo"><img src="patrocinadores/img9.png" alt="Patrocinador 9"></div></div>
+                <div class="col-lg-3 col-md-4 col-6"><div class="patrocinador-logo"><img src="patrocinadores/img10.png" alt="Patrocinador 10"></div></div>
+                <div class="col-lg-3 col-md-4 col-6"><div class="patrocinador-logo"><img src="patrocinadores/img11.png" alt="Patrocinador 11"></div></div>
+                <div class="col-lg-3 col-md-4 col-6"><div class="patrocinador-logo"><img src="patrocinadores/img12.png" alt="Patrocinador 12"></div></div>
+                <!-- Adicione os outros 4 se precisar -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-3 text-center text-white-50">
+        <div class="container">
+            <p class="mb-0">DNA ADM 2025© - Etec de Olímpia - Todos os direitos reservados</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+</body>
+</html>
